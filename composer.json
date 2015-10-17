@@ -1,0 +1,7 @@
+{
+    "require": {
+        "slim/slim": "^2.6",
+        "neoxygen/neoclient": "^3.3",
+        "symfony/yaml": "^2.7"
+    }
+}
