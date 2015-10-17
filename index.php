@@ -14,11 +14,12 @@ $db = ClientBuilder::create()
     ->build();
 
 $app = new \Slim\Slim();
-$app->get('/hello/:name', function ($name) {
-    echo "Hello, " . $name;
-});
-$app->get('/', function() use($db) {
-	echo "Hello world";
+
+include("users/apis.php");
+
+$app->get('/', function() use($db, $config) {
+	echo "Socialize... using neo4j version ";
 	echo $db->getNeo4jVersion();
+	echo " on ".$config['db']['proto']."://".$config['db']['user'].":".$config['db']['pass']."@".$config['db']['host'].":".$config['db']['port'];
 });
 $app->run();
