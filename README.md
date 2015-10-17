@@ -1,4 +1,8 @@
-# social-backend
+Socialize
+===========
+
+## ACCEPTING PULL REQUESTS!
+
 Backend for a social network application
 
 ### Instructions
