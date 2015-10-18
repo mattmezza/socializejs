@@ -3,7 +3,7 @@ Socialize
 
 # Backend for a social network application
 
-This is a project aimed to provide developers a great and robust system to build cool social networks from scratch or around existing products. For this reason it provides RESTful handy APIs to let developers create cool webapps or mobile apps with ease.
+This is a project aimed to provide developers a great and robust system to build cool social networks from scratch or around existing products. For this reason it provides RESTful handy APIs to let developers create cool webapps or mobile apps with ease. **Socialize** is run by volunteers and it's Open Sourced. Anyone willing to help is welcome!
 
 --------------
 
@@ -25,3 +25,7 @@ Check out the full list of APIs to develop here [https://github.com/mattmezza/so
 - run `php composer.phar install` from the same dir;
 - run `php -S 0.0.0.0:8000 -t ~/project_dir` to start a webserver with document root set into project dir;
 - go to `http://localhost:8000/index.php/` to see the app running.
+
+
+
+<p style="font-style: italic;font-size: 8px;">Made with ❤️ in 🇮🇹 by a bunch of crazy coders</p>
