@@ -1,12 +1,16 @@
 Socialize
 ===========
 
+# Backend for a social network application
+
+--------------
+
 ## ACCEPTING PULL REQUESTS!
 I am accepting pull requests implementing one of [these APIs](https://github.com/mattmezza/socialize/issues?utf8=✓&q=is%3Aopen+label%3Ahigh-priority+label%3AAPI).
 
-Check out the full list of APIs to develop here [https://github.com/mattmezza/socialize/issues?utf8=✓&q=is%3Aopen+label%3AAPI](https://github.com/mattmezza/socialize/issues?utf8=✓&q=is%3Aopen+label%3AAPI).
+Check out the full list of APIs to develop here [https://github.com/mattmezza/socialize/issues?utf8=✓&q=is%3Aopen+label%3AAPI](https://github.com/mattmezza/socialize/issues?utf8=✓&q=is%3Aopen+label%3AAPI) and please consider the low/high priority label.
 
-Backend for a social network application
+-------------
 
 ### Instructions
 
