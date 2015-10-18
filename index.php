@@ -15,6 +15,12 @@ $db = ClientBuilder::create()
 
 $app = new \Slim\Slim();
 
+include("account/apis.php");
+include("feeds/apis.php");
+include("follow/apis.php");
+include("friends/apis.php");
+include("posts/apis.php");
+include("profile/apis.php");
 include("users/apis.php");
 
 $app->get('/', function() use($db, $config) {
