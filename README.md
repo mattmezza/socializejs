@@ -3,6 +3,8 @@ Socialize
 
 # Backend for a social network application
 
+This is a project aimed to provide developers a great and robust system to build cool social networks from scratch or around existing products. For this reason it provides RESTful handy APIs to let developers create cool webapps or mobile apps with ease.
+
 --------------
 
 ## ACCEPTING PULL REQUESTS!
@@ -12,7 +14,7 @@ Check out the full list of APIs to develop here [https://github.com/mattmezza/so
 
 -------------
 
-### Instructions
+### Instructions to get started
 
 - open up a browser window and go to [Neo4J download page](http://neo4j.com/download/) to get a copy of the most famous graph db;
 - start Neo4J using `~/Downloads/neo4j_dir/bin/neo4j start` command;
