@@ -1,6 +1,6 @@
 Socialize
 ===========
-
+<img src="https://cloud.githubusercontent.com/assets/1915989/10564717/1de2e414-75be-11e5-8956-3f4ba79f9674.png" width="200" alt="logo">
 # Backend for a social network application
 
 This is a project aimed to provide developers a great and robust system to build cool social networks from scratch or around existing products. For this reason it provides RESTful handy APIs to let developers create cool webapps or mobile apps with ease. **Socialize** is run by volunteers and it's Open Sourced. Anyone willing to help is welcome!
