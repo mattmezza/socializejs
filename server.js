@@ -4,48 +4,39 @@
 // =============================================================================
 
 // call the packages we need
-var express    = require('express');        // call express
-var app        = express();                 // define our app using express
-var bodyParser = require('body-parser');
-var config = require('./config'); // get our config file
 var level = require("level-browserify");
 var levelgraph = require("levelgraph");
-
 // just use this in the browser with the provided bundle
+var config = require('./config'); // get our config file
 var db = levelgraph(level(config.database));
+var restify = require('restify')
+    , fs = require('fs')
 
-// configure app to use bodyParser()
-// this will let us get the data from a POST
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+var controllers = {}
+    , controllers_path = process.cwd() + '/app/controllers'
+fs.readdirSync(controllers_path).forEach(function (file) {
+    if (file.indexOf('.js') != -1) {
+        controllers[file.split('.')[0]] = require(controllers_path + '/' + file)
+    }
+})
 
-var port = process.env.PORT || 8080;        // set our port
+var server = restify.createServer();
+server
+    .use(restify.fullResponse())
+    .use(restify.bodyParser())
 
-// ROUTES FOR OUR API
-// =============================================================================
-var router = express.Router();              // get an instance of the express Router
+server.get("/posts/new", controllers.posts.createPost)
+server.del("/posts/:post_id", controllers.posts.deletePost)
 
-router.get('/add', function(req, res) {
-  var triple = { subject: "Matteo", predicate: "ama", object: "Enza" };
-  db.put(triple, function(err) {
-    // do something after the triple is inserted
-  });
-  res.json({ message: 'hooray! welcome to our api!' });
-});
-router.get('/get', function(req, res) {
-  db.get({ subject: "Matteo" }, function(err, list) {
-    console.log(list);
-    res.json(list);
-  });
-});
+var port = process.env.PORT || 8080;
+server.listen(port, function (err) {
+    if (err)
+        console.error(err)
+    else
+        console.log('App is ready at : ' + port)
+})
 
-// more routes for our API will happen here
-
-// REGISTER OUR ROUTES -------------------------------
-// all of our routes will be prefixed with /api
-app.use('/api', router);
-
-// START THE SERVER
-// =============================================================================
-app.listen(port);
-console.log('Magic happens on port ' + port);
+if (process.env.environment == 'production')
+    process.on('uncaughtException', function (err) {
+        console.error(JSON.parse(JSON.stringify(err, ['stack', 'message', 'inner'], 2)))
+    })
