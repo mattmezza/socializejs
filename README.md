@@ -16,10 +16,10 @@ Check out the full list of APIs to develop here [https://github.com/mattmezza/so
 
 ### Instructions to get started
 
-- clone this project with your preferred method;
-- change params into `config.js` accordingly;
-- run `npm install` from the project root dir;
-- run `node server.js` from the project root dir;
+- `git clone https://github.com/mattmezza/socializejs.git`
+- `cd socializejs`
+- `npm install`
+- `node server.js`
 - go to `http://localhost:8080/` to see the app running.
 
 
