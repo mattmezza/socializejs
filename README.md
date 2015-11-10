@@ -18,9 +18,18 @@ Check out the full list of APIs to develop here [https://github.com/mattmezza/so
 
 ### Instructions to get started
 
+- install and start *Neo4J*
+  - OS X
+    - `brew install neo4j`
+    - `neo4j start`
+  - Windows
+    - (don't know 😎)
+  - Linux
+    - (don't know 😎)
 - `git clone https://github.com/mattmezza/socializejs.git`
 - `cd socializejs`
 - `npm install`
+- edit `config.js` accordingly with your *Neo4J* credentials
 - `node server.js`
 - go to `http://localhost:8080/` to see the app running.
 
