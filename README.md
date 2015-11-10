@@ -8,9 +8,11 @@ This is a project aimed to provide developers a great and robust system to build
 --------------
 
 ## ACCEPTING PULL REQUESTS!
-I am accepting pull requests implementing one of [these APIs](https://github.com/mattmezza/socialize/issues?utf8=✓&q=is%3Aopen+label%3Ahigh-priority+label%3AAPI).
+I am accepting pull requests implementing one of [these APIs](https://github.com/mattmezza/socializejs/issues?utf8=✓&q=is%3Aopen+label%3Ahigh-priority+label%3AAPI).
 
-Check out the full list of APIs to develop here [https://github.com/mattmezza/socialize/issues?utf8=✓&q=is%3Aopen+label%3AAPI](https://github.com/mattmezza/socialize/issues?utf8=✓&q=is%3Aopen+label%3AAPI) and please consider the low/high priority label.
+See [CONTRIBUTING.md](https://github.com/mattmezza/socializejs/blob/master/CONTRIBUTING.md) to know more about contributing to this project.
+
+Check out the full list of APIs to develop here [https://github.com/mattmezza/socializejs/issues?utf8=✓&q=is%3Aopen+label%3AAPI](https://github.com/mattmezza/socializejs/issues?utf8=✓&q=is%3Aopen+label%3AAPI) and please consider the low/high priority label.
 
 -------------
 
