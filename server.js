@@ -4,16 +4,15 @@
 // =============================================================================
 
 // call the packages we need
-var level = require("level-browserify");
-var levelgraph = require("levelgraph");
-// just use this in the browser with the provided bundle
-var config = require('./config'); // get our config file
-var db = levelgraph(level(config.database));
-var restify = require('restify')
-    , fs = require('fs')
+var config  = require('./config'); // get our config file
+var neo4j   = require('node-neo4j');
+var db      = new neo4j(config.database);
 
-var controllers = {}
-    , controllers_path = process.cwd() + '/app/controllers'
+var restify = require('restify')
+var fs      = require('fs')
+
+var controllers       = {}
+var controllers_path  = process.cwd() + '/app/controllers'
 fs.readdirSync(controllers_path).forEach(function (file) {
     if (file.indexOf('.js') != -1) {
         controllers[file.split('.')[0]] = require(controllers_path + '/' + file)
@@ -25,7 +24,7 @@ server
     .use(restify.fullResponse())
     .use(restify.bodyParser())
 
-server.get("/posts/new", controllers.posts.createPost)
+server.post("/posts/new", controllers.posts.createPost)
 server.del("/posts/:post_id", controllers.posts.deletePost)
 
 var port = process.env.PORT || 8080;

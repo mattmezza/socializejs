@@ -3,9 +3,8 @@
   "main": "server.js",
   "dependencies": {
     "restify": "^4.0.3",
-    "levelgraph": "~1.1.0",
-    "level-browserify": "~1.0.1",
-    "config": "^1.16.0"
+    "config": "^1.16.0",
+    "node-neo4j": "^2.0.3"
   },
   "author": "Matteo Merola <mattmezza@gmail.com>",
   "license": "MIT"

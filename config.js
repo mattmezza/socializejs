@@ -1,3 +1,3 @@
 module.exports = {
-    database: 'socializejs'
+    database: 'http://neo4j:admin@localhost:7474'
 };
