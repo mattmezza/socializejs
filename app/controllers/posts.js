@@ -3,7 +3,7 @@ var config  = require('../../config'); // get our config file
 var neo4j   = require('node-neo4j');
 db          = new neo4j(config.database);
 
-exports.createPost = function(req, res, next) {
+exports.post = function(req, res, next) {
   var user = "m.merola1";
   var post = req.body;
   console.log(post);
@@ -16,9 +16,9 @@ exports.createPost = function(req, res, next) {
   });
 }
 
-exports.deletePost = function(req, res, next) {
+exports.delete = function(req, res, next) {
   var user = "m.merola1";
-  var post_id = req.params.post_id;
+  var post_id = req.params.id_post;
   db.deleteNode(post_id, function(err, node){
     if(err) {
       res.json({result:"KO",msg:err})
@@ -30,4 +30,20 @@ exports.deletePost = function(req, res, next) {
       }
     }
 });
+}
+
+exports.likes = function(req, res, next) {
+  res.json({result:"KO", msg: "Not yet implemented."})
+}
+
+exports.unlike = function(req, res, next) {
+  res.json({result:"KO", msg: "Not yet implemented."})
+}
+
+exports.like = function(req, res, next) {
+  res.json({result:"KO", msg: "Not yet implemented."})
+}
+
+exports.update = function(req, res, next) {
+  res.json({result:"KO", msg: "Not yet implemented."})
 }
