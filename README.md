@@ -8,17 +8,28 @@ This is a project aimed to provide developers a great and robust system to build
 --------------
 
 ## ACCEPTING PULL REQUESTS!
-I am accepting pull requests implementing one of [these APIs](https://github.com/mattmezza/socialize/issues?utf8=✓&q=is%3Aopen+label%3Ahigh-priority+label%3AAPI).
+I am accepting pull requests implementing one of [these APIs](https://github.com/mattmezza/socializejs/issues?utf8=✓&q=is%3Aopen+label%3Ahigh-priority+label%3AAPI).
 
-Check out the full list of APIs to develop here [https://github.com/mattmezza/socialize/issues?utf8=✓&q=is%3Aopen+label%3AAPI](https://github.com/mattmezza/socialize/issues?utf8=✓&q=is%3Aopen+label%3AAPI) and please consider the low/high priority label.
+See [CONTRIBUTING.md](https://github.com/mattmezza/socializejs/blob/master/CONTRIBUTING.md) to know more about contributing to this project.
+
+Check out the full list of APIs to develop here [https://github.com/mattmezza/socializejs/issues?utf8=✓&q=is%3Aopen+label%3AAPI](https://github.com/mattmezza/socializejs/issues?utf8=✓&q=is%3Aopen+label%3AAPI) and please consider the low/high priority label.
 
 -------------
 
 ### Instructions to get started
 
+- install and start *Neo4J*
+  - OS X
+    - `brew install neo4j`
+    - `neo4j start`
+  - Windows
+    - (don't know 😎)
+  - Linux
+    - (don't know 😎)
 - `git clone https://github.com/mattmezza/socializejs.git`
 - `cd socializejs`
 - `npm install`
+- edit `config.js` accordingly with your *Neo4J* credentials
 - `node server.js`
 - go to `http://localhost:8080/` to see the app running.
 
